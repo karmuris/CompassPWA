@@ -7,7 +7,10 @@ button,select{font:inherit}
 .topbar select{width:100%;min-height:54px;padding:0 16px;border:1px solid var(--line);border-radius:14px;background:var(--panel);color:var(--text);font-size:20px;font-weight:650}
 .result-panel{border:1px solid var(--line);border-radius:20px;background:var(--panel);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px;text-align:center}
 .label,.input-label{color:var(--muted);font-size:clamp(14px,2.2vw,20px);font-weight:750;letter-spacing:.12em}
-.heading{font-size:clamp(78px,20vw,170px);font-weight:800;line-height:.95;font-variant-numeric:tabular-nums;color:var(--accent);margin:10px 0 22px}
+.compass-results{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:center;margin-bottom:18px}
+.compass-result{min-width:0;text-align:center}
+.compass-value{font-size:clamp(52px,13vw,105px);font-weight:800;line-height:1;font-variant-numeric:tabular-nums;color:var(--accent);margin-top:10px;white-space:nowrap}
+.compass-value.magnetic{color:var(--text)}
 .course{font-size:clamp(38px,8vw,72px);font-weight:700;font-variant-numeric:tabular-nums;margin-top:5px}
 .keypad{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;touch-action:manipulation}
 .keypad button{min-height:0;border:1px solid var(--line);border-radius:16px;background:#181d25;color:var(--text);font-size:clamp(28px,6vw,44px);font-weight:700;cursor:pointer;user-select:none}
@@ -17,7 +20,7 @@ button,select{font:inherit}
 @media (orientation:landscape){
   .app-shell{max-width:760px;grid-template-columns:1fr;grid-template-rows:auto minmax(220px,.72fr) minmax(360px,1.28fr)}
   .topbar,.result-panel,.keypad{grid-column:1;grid-row:auto}
-  .heading{font-size:clamp(76px,12vh,145px);margin:8px 0 14px}
+  .compass-value{font-size:clamp(52px,9vh,90px)}
   .course{font-size:clamp(38px,7vh,64px)}
   .keypad{grid-template-rows:repeat(4,1fr)}
   .keypad button{height:100%;font-size:clamp(34px,6vh,52px)}
@@ -26,7 +29,7 @@ button,select{font:inherit}
 @media (orientation:portrait){
   .app-shell{grid-template-columns:1fr;grid-template-rows:auto minmax(190px,.72fr) minmax(420px,1.28fr)}
   .result-panel{padding:12px}
-  .heading{font-size:clamp(76px,19vw,145px);margin:8px 0 14px}
+  .compass-value{font-size:clamp(52px,13vw,100px)}
   .course{font-size:clamp(38px,8vw,64px)}
   .keypad{min-height:0;grid-template-rows:repeat(4,1fr)}
   .keypad button{height:100%;font-size:clamp(34px,7vw,52px)}

@@ -14,17 +14,14 @@
 </head>
 <body>
 <main class="app-shell">
-  <header class="topbar">
-    <select id="aircraft" aria-label="Aircraft"></select>
-  </header>
-
+  <header class="topbar"><select id="aircraft" aria-label="Aircraft"></select></header>
   <section class="result-panel">
-    <div class="label">OHJAUSSUUNTA</div>
-    <div id="heading" class="heading">---</div>
-    <div class="input-label">SYÖTETTY SUUNTA</div>
-    <div id="course" class="course">---</div>
+    <div class="compass-results">
+      <div class="compass-result primary"><div class="label">REPEAT COMPASS</div><div id="repeatHeading" class="compass-value">---</div></div>
+      <div class="compass-result"><div class="label">MAG. COMPASS</div><div id="magHeading" class="compass-value magnetic">---</div></div>
+    </div>
+    <div class="input-label">SYÖTETTY SUUNTA</div><div id="course" class="course">---</div>
   </section>
-
   <section class="keypad" aria-label="Numeronäppäimistö">
     <button data-key="7">7</button><button data-key="8">8</button><button data-key="9">9</button>
     <button data-key="4">4</button><button data-key="5">5</button><button data-key="6">6</button>
@@ -32,7 +29,5 @@
     <button data-action="back" class="secondary">⌫</button><button data-key="0">0</button><button data-action="clear" class="secondary">CLR</button>
   </section>
 </main>
-<script src="aircraft-data.js"></script>
-<script src="app.js"></script>
-</body>
-</html>
+<script src="aircraft-data.js"></script><script src="app.js"></script>
+</body></html>
