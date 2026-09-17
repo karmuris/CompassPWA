@@ -1,4 +1,4 @@
-const CACHE = 'compass-heading-offline-v5-newdata';
+const CACHE = 'compass-heading-offline-v5.1-no-double-variation';
 const APP_SHELL = [
   './',
   './index.html',

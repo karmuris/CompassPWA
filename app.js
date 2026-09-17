@@ -14,7 +14,7 @@
     const trueCourse=Number(input); const normalized=trueCourse===360?0:trueCourse;
     courseEl.textContent=fmt(normalized);
     const ac=window.AIRCRAFT_DATA[aircraftSelect.value];
-    const magnetic=(normalized+ac.variation)%360; const row=ac.table[Math.round(magnetic)%360];
+    const row=ac.table[Math.round(normalized)%360];
     if(row){repeatEl.textContent=fmt(row.rc===360?0:row.rc);magneticEl.textContent=fmt(row.mc===360?0:row.mc);}
     else {repeatEl.textContent='---';magneticEl.textContent='---';}
   }
